@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>calc方法</title>
+		<style>
+			#container{
+				width: 300px;
+				background-color: pink;
+			}
+			#foo{
+				width: calc(50% - 80px);
+				background-color: limegreen;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="foo">示例Div</div>
+		</div>
+		<input type="button" value="修改div宽度" onclick="changeWidth()" />
+		
+		<script>
+			function changeWidth(){
+				document.getElementById("container").style.width = "1000px";
+			}
+		</script>
+	</body>
+</html>

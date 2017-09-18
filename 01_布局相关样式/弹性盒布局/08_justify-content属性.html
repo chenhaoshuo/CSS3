@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>justify-content属性</title>
+		<style>
+			#container{
+				display: flex;
+				border: solid 5px blue;
+				width: 600px;
+				height: 30px;
+				/*justify-content属性
+				 * flex-start:从main-start开始布局所有的子元素（默认值）
+				 * flex-end:从main-end开始布局所有子元素
+				 * center:居中布局所有子元素
+				 * space-between:将第一个元素布局在main-start处，最后一个元素布局在main-end处，空白部分平均分配在所有子元素之间
+				 * space-around:将空白平均分配在各子元素之间，包括首元素和尾元素之间
+				 */
+				/*justify-content: flex-start;*/
+				/*justify-content: flex-end;*/
+				/*justify-content: center;*/
+				/*justify-content: space-between;*/
+				justify-content: space-around;
+			}
+			#text-a{
+				background-color: orange;
+				width: 100px;
+				/*如果某个子元素的flex-grow属性值不为0，则justify-content属性无效*/
+				/*flex: 1;*/	
+			}
+			#text-b{
+				background-color: yellow;
+				width: 150px;
+			}
+			#text-c{
+				background-color: limegreen;
+				width: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="text-a">示例文字A</div>
+			<div id="text-b">示例文字B</div>
+			<div id="text-c">示例文字C</div>
+		</div>
+	</body>
+</html>

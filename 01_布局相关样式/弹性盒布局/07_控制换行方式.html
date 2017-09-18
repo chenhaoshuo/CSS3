@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>控制换行方式</title>
+		<style>
+			#container{
+				display: flex;
+				border: solid 5px blue;
+				/*flex-flow包含两个属性：flex-direction|flex-wrap*/
+				flex-flow: row wrap;
+				flex-wrap: wrap-reverse;
+				width: 500px;
+				height: 300px;
+			}
+			#text-a{
+				background-color: orange;
+			}
+			#text-b{
+				background-color: yellow;
+			}
+			#text-c{
+				background-color: limegreen;
+			}
+			#text-a, #text-b, #text-c{
+				box-sizing: border-box;
+				font-size: 1.5em;
+				font-weight: bold;
+				width: 250px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="text-a">示例文字A</div>
+			<div id="text-b">示例文字B</div>
+			<div id="text-c">示例文字C</div>
+		</div>
+	</body>
+</html>
