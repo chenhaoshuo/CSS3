@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>3D移动</title>
+		<style type="text/css">
+			div{
+				width: 300px;
+				height: 100px;
+				background-color: yellow;
+				text-align: center;
+				-webkit-transform: rotateY(60deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div">示例文字</div>
+		<input type="button" value="在X轴上移动" onclick="tranX()" />
+		<input type="button" value="在Y轴上移动" onclick="tranY()" />
+		<input type="button" value="在Z轴上移动" onclick="tranZ()" />
+		
+		<script>
+			var n,tranINT,tranXINT,tranYINT,tranZINT;
+			var div = document.getElementById("div");
+			function tranX(){
+				n = 0;
+				clearInterval(tranXINT)
+				tranXINT = setInterval(startXTran, 10);
+			}
+			function startXTran(){
+				n += 1;
+				div.style.webkitTransform = "translateX(" + n + "px)";
+				if(n == 50){
+					clearInterval(tranXINT);
+					n = 0;
+				}
+			}
+			
+			function tranY(){
+				n = 0;
+				clearInterval(tranYINT)
+				tranYINT = setInterval(startYTran, 10);
+			}
+			function startYTran(){
+				n += 1;
+				div.style.webkitTransform = "translateY(" + n + "px)";
+				if(n == 50){
+					clearInterval(tranYINT);
+					n = 0;
+				}
+			}
+			
+			function tranZ(){
+				n = 0;
+				clearInterval(tranZINT)
+				tranZINT = setInterval(startZTran, 10);
+			}
+			function startZTran(){
+				n += 1;
+				div.style.webkitTransform = "translateZ(" + n + "px)";
+				if(n == 50){
+					clearInterval(tranZINT);
+					n = 0;
+				}
+			}
+		</script>
+	</body>
+</html>
